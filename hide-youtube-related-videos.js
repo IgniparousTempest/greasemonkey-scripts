@@ -13,13 +13,13 @@
 (function() {
     'use strict';
 
-    // Remove sidebar, which includes related videos
-    const related = document.getElementById("secondary");
-    related.style.display = 'none';
-
     // Stop autoplay
     const autoplay = document.getElementById('toggleButton');
     if (autoplay.querySelector("#ink").hasAttribute("checked")) {
         autoplay.click();
     }
+
+    // Remove sidebar, which includes related videos
+    const related = document.getElementById("secondary");
+    related.style.display = 'none';
 })();
