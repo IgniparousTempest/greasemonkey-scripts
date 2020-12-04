@@ -12,16 +12,14 @@
 
 (function() {
     'use strict';
+
+    // Stop autoplay
+    const autoplay = document.getElementById('toggleButton');
+    if (autoplay && autoplay.querySelector("#ink").hasAttribute("checked")) {
+        autoplay.click();
+    }
+
+    // Remove sidebar, which includes related videos
+    const related = document.getElementById("secondary");
+    related.style.display = 'none';
 })();
-
-    window.addEventListener('load', function() {
-        // Stop autoplay
-        const autoplay = document.getElementById('toggleButton');
-        if (autoplay && autoplay.querySelector("#ink").hasAttribute("checked")) {
-            autoplay.click();
-        }
-
-        // Remove sidebar, which includes related videos
-        const related = document.getElementById("secondary");
-        related.style.display = 'none';
-    }, false);
